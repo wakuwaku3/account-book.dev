@@ -35,8 +35,6 @@ sysctl -p
 
 .env ファイルを記述することで `docker-compose.yml` 内で展開される環境変数を記述できる。(通常の環境変数からは読み取らないのでここに記述する)
 
--
-
 ### GITHUB_USER_NAME
 
 GitHub にコミットするためのユーザー名
@@ -57,7 +55,3 @@ Api で Password を Hash するためのキー
 ### JWT_SECRET
 
 Api で JWT Token を 生成するためのキー
-
-```
-
-```
