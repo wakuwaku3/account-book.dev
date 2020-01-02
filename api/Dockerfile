@@ -25,5 +25,5 @@ RUN mkdir -p /account-book.api
 VOLUME /go
 VOLUME /account-book.api
 
-EXPOSE 8080
+EXPOSE 8080 8081
 CMD ["bash", "/init.sh"]
