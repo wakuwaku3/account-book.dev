@@ -5,7 +5,7 @@ account-book の開発環境
 ## init
 
 ```sh
-docker-compose up -d
+docker-compose up
 ```
 
 ### Desktop Linux の場合
@@ -13,7 +13,7 @@ docker-compose up -d
 ```sh
 # 同時にwatch可能なファイルの数を増やす
 echo fs.inotify.max_user_watches= 65536 | sudo tee -a /etc/sysctl.conf
-sysctl -p
+sudo sysctl -p
 ```
 
 ### Docker Toolkit を使用する場合
@@ -30,6 +30,7 @@ sysctl -p
   - 127.0.0.1:8080
   - 127.0.0.1:8081
   - 127.0.0.1:3000
+  - 127.0.0.1:3001
 
 ## env
 

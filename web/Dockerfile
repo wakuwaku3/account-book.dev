@@ -1,4 +1,4 @@
-FROM node:lts-buster
+FROM node:12.14.0-buster
 
 LABEL Name="AccountBook.Web"
 LABEL Version="1.0.0"
@@ -20,5 +20,5 @@ ADD ./init.sh init.sh
 RUN mkdir -p /account-book.web
 VOLUME /account-book.web
 
-EXPOSE 3000
+EXPOSE 3000 3001
 CMD ["bash", "/init.sh"]
