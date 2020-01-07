@@ -26,6 +26,13 @@ echo fs.inotify.max_user_watches= 65536 | sudo tee -a /etc/sysctl.conf
 sysctl -p
 ```
 
+### Docker for Mac の場合
+```sh
+# https://stackoverflow.com/questions/41192680/update-max-map-count-for-elasticsearch-docker-container-mac-host
+screen ~/Library/Containers/com.docker.docker/Data/vms/0/tty
+sysctl -w vm.max_map_count=262144
+```
+
 - docker-machine にポートフォワーディングを設定する
   - 127.0.0.1:8080
   - 127.0.0.1:8081
