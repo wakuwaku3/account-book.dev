@@ -1,4 +1,4 @@
-# dev-account-book
+# account-book.dev
 
 account-book の開発環境
 
