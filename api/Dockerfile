@@ -21,9 +21,10 @@ WORKDIR /
 ADD ./init.sh init.sh
 ADD ./firebase-credentials.json firebase-credentials.json
 
-RUN mkdir -p /account-book.api
+RUN mkdir -p /repo
 VOLUME /go
-VOLUME /account-book.api
+VOLUME /repo
+WORKDIR /repo
 
-EXPOSE 8080 8081
+EXPOSE 8080
 CMD ["bash", "/init.sh"]

@@ -6,6 +6,11 @@ account-book の開発環境
 
 ```sh
 docker-compose up
+
+# api サーバーを起動
+docker exec -it account-bookdev_api_1 go run main.go
+# web サーバーを起動
+docker exec -it account-bookdev_web_1 npm start
 ```
 
 ### Desktop Linux の場合

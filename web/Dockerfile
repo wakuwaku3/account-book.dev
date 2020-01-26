@@ -17,8 +17,9 @@ ENV GITHUB_EMAIL=github-email
 WORKDIR /
 ADD ./init.sh init.sh
 
-RUN mkdir -p /account-book.web
-VOLUME /account-book.web
+RUN mkdir -p /repo
+VOLUME /repo
+WORKDIR /repo
 
-EXPOSE 3000 3001
+EXPOSE 3000
 CMD ["bash", "/init.sh"]

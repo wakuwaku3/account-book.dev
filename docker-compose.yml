@@ -11,11 +11,10 @@ services:
       JWT_SECRET: ${JWT_SECRET}
       FRONT_END_URL: "http://127.0.0.1:3000"
     volumes:
-      - "account-book.api:/account-book.api"
+      - "account-book.api:/repo"
       - "account-book.api.go.1.11:/go"
     ports:
       - "8080:8080"
-      - "8081:8081"
     tty: true
   web:
     build: ./web
@@ -25,12 +24,11 @@ services:
       GITHUB_EMAIL: ${GITHUB_EMAIL}
       REACT_APP_DEV_API_URL: "http://127.0.0.1:8080"
     volumes:
-      - "account-book.web:/account-book.web"
+      - "account-book.web:/repo"
     ports:
       - "3000:3000"
-      - "3001:3001"
     tty: true
 volumes:
   account-book.api:
-  account-book.api.go:
+  account-book.api.go.1.11:
   account-book.web:
