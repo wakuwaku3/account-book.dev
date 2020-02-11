@@ -10,6 +10,10 @@ services:
       PASSWORD_HASHED_KEY: ${PASSWORD_HASHED_KEY}
       JWT_SECRET: ${JWT_SECRET}
       FRONT_END_URL: "http://127.0.0.1:3000"
+      AWS_ACCESS_KEY: ${AWS_ACCESS_KEY}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      AWS_TOPICS: ${AWS_TOPICS}
+      AWS_QUEUES: ${AWS_QUEUES}
     volumes:
       - "account-book.api:/repo"
       - "account-book.api.go.1.11:/go"
